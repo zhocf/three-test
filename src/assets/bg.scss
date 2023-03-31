@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    .menu-control{
+        width: 180px;
+        border-right: 1px solid #e1dada;
+    }
+    .canvas-control{
+        flex: 1;
+    }
+}
