@@ -28,7 +28,11 @@ function App() {
                 {
                     label: <Link to="/test/modeling">模型</Link>,
                     key: '/test/modeling'
-                }
+                },
+                {
+                    label: <Link to="/test/video">音频可视化</Link>,
+                    key: '/test/video'
+                },
             ],
         },
     ];

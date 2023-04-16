@@ -10,6 +10,10 @@ const routes:RouteType[] = [
     {
         path:"/test/modeling",
         element:() => import("@/views/Test/modeling")
+    },
+    {
+        path:"/test/video",
+        element:() => import("@/views/Test/video")
     }
 ]
 export default routes
