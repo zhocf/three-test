@@ -8,22 +8,21 @@ const Modeling = () => {
     useTheme({
         el: domRef,
         axisHidden: true,
-        rendererColor:'#f3f3f3',
+        rendererColor: '#f3f3f3',
         cameraPosition: [0, 0, 10],
     }, async ({ scene, renderer, camera }) => {
-        let light = new THREE.AmbientLight("white")
+        let light = new THREE.AmbientLight("red")
         scene.add(light)
         const loader = new GLTFLoader()
-        const parrotData = await loader.loadAsync("/image/mode/b.glb")
-        console.log(parrotData);
-        
-        scene.add(parrotData.scene)
-
         const initRender = () => {
             renderer.render(scene, camera)
             requestAnimationFrame(initRender)
         }
-        initRender()
+        loader.load("/image/mode/b.glb", function (gltf) {
+            scene.add(gltf.scene)
+            initRender()
+        })
+
     })
     return (
         <div style={{ height: '100%' }} ref={domRef}>

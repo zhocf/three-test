@@ -35,6 +35,17 @@ function App() {
                 },
             ],
         },
+        {
+            label: '官网案例',
+            key: '/authority',
+            icon: <SettingOutlined />,
+            children: [
+                {
+                    label: <Link to="authority/keyframes">keyframes</Link>,
+                    key: 'authority/keyframes'
+                }
+            ],
+        },
     ];
     useEffect(() => {
         setSelectKeys(location.pathname)
@@ -47,7 +58,7 @@ function App() {
                     mode="inline"
                     items={Items}
                     selectedKeys={[selectedKeys]}
-                    defaultOpenKeys={['/examples','/test']} />
+                    defaultOpenKeys={['/examples', '/test']} />
             </div>
             <div className='canvas-control'>
                 <RouterView />

@@ -14,6 +14,10 @@ const routes:RouteType[] = [
     {
         path:"/test/video",
         element:() => import("@/views/Test/video")
+    },
+    {
+        path:"/authority/keyframes",
+        element:() => import("@/views/Authority/keyframes")
     }
 ]
 export default routes
